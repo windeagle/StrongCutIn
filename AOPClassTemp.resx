@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProxyClassTemp" xml:space="preserve">
+    <value>using System.Collections.Generic;
+using StrongCutIn.Interface.Common;
+using StrongCutIn.Interface;
+using StrongCutIn.Interface.WithReturn.NoParam;
+using StrongCutIn.Interface.WithReturn.OneParam;
+using StrongCutIn.Interface.WithoutReturn.NoParam;
+using StrongCutIn.Interface.WithoutReturn.OneParam;
+
+namespace AOPTmpClassNameSpace
+{    public class ${InnerClassName2}_TmpAOP : ${InnerClassName}
+    {
+        private ${InnerClassName} _target;
+
+        public ${InnerClassName} Target
+        {
+            get
+            {
+                return _target;
+            }
+            set
+            {
+                _target = value;
+            }
+        }
+        
+        public ${InnerClassName2}_TmpAOP(${InnerClassName} target)
+        {
+            Target = target;
+        }
+        public ${InnerClassName2}_TmpAOP()
+        {
+            Target = new ${InnerClassName}();
+        }
+        
+#foreach($property in $Properties)
+#beforeall
+#each
+${property}
+#afterall
+#nodata
+#end
+
+#foreach($method in $Methods)
+#beforeall
+#each
+        internal class TempClass${method.HashCode}
+        {
+            private ${InnerClassName} _obj;
+            public ${InnerClassName} Obj
+            {
+                get
+                {
+                    return _obj;
+                }
+                set
+                {
+                    _obj = value;
+                }
+            }
+            public object ${method.Name}(object[] objs)
+            {
+                ${method.AsReturnTypeNameWithReturn}_obj.${method.Name}(
+#set($i = 0)
+#foreach($paramTypeNameStr in $method.ParamsTypeNameStrList)
+#if($i == 0)
+                (${paramTypeNameStr})objs[$i]
+#set($i = $i + 1)
+#else
+                ,(${paramTypeNameStr})objs[$i]
+#set($i = $i + 1)
+#end
+#end
+                );
+                return null;
+            }
+        }
+
+        ${method.Flag}internal class Temp2Class${method.HashCode}
+        ${method.Flag}{
+        ${method.Flag}    private ${method.InterfaceName}${method.ParamsTypeStrWithReturnType} _obj;
+        ${method.Flag}    public ${method.InterfaceName}${method.ParamsTypeStrWithReturnType} Obj
+        ${method.Flag}    {
+        ${method.Flag}        get
+        ${method.Flag}        {
+        ${method.Flag}            return _obj;
+        ${method.Flag}        }
+        ${method.Flag}        set
+        ${method.Flag}        {
+        ${method.Flag}            _obj = value;
+        ${method.Flag}        }
+        ${method.Flag}    }
+        ${method.Flag}    public object TempMethod(object[] objs)
+        ${method.Flag}    {
+        ${method.Flag}        ${method.AsReturnTypeNameWithReturn}_obj(
+#set($i = 0)
+#foreach($paramTypeNameStr in $method.ParamsTypeNameStrList)
+#if($i == 0)
+        ${method.Flag}        (${paramTypeNameStr})objs[$i]
+#set($i = $i + 1)
+#else
+        ${method.Flag}        ,(${paramTypeNameStr})objs[$i]
+#set($i = $i + 1)
+#end
+#end
+        ${method.Flag}        );
+        ${method.Flag}        return null;
+        ${method.Flag}    }
+        ${method.Flag}}
+
+        internal class Temp3Class${method.HashCode}
+        {
+            private Call _Call;
+            public Call Method
+            {
+                get
+                {
+                    return _Call;
+                }
+                set
+                {
+                    _Call = value;
+                }
+            }
+            public ${method.ReturnTypeName} TempMethod(${method.ParamsStr})
+            {
+                ${method.AsReturnTypeNameWithReturn}Method(new object[] { ${method.ParamsNameStr} });
+            }
+        }
+        public override ${method.ReturnTypeName} ${method.Name}(${method.ParamsStr})
+        {
+            List&lt;IBeginHandler&gt; BeginHandlerList = new List&lt;IBeginHandler&gt;();
+#foreach($handlerNameStr in $method.BeginHandlerNameStrList)
+#beforeall
+#each
+            BeginHandlerList.Add(new ${handlerNameStr}());
+#afterall
+#nodata
+#end
+
+            List&lt;IEndHandler&gt; EndHandlerList = new List&lt;IEndHandler&gt;();
+#foreach($handlerNameStr in $method.EndHandlerNameStrList)
+#beforeall
+#each
+            EndHandlerList.Add(new ${handlerNameStr}());
+#afterall
+#nodata
+#end
+
+            List&lt;IAroundHandler&gt; HandlerList = new List&lt;IAroundHandler&gt;();
+#foreach($handlerNameStr in $method.AroundHandlerNameStrList)
+#beforeall
+#each
+            HandlerList.Add(new ${handlerNameStr}());
+#afterall
+#nodata
+#end
+            List&lt;System.Type&gt; types = new List&lt;System.Type&gt;();
+#foreach($paramTypeNameStr in $method.ParamsTypeNameStrList)
+#beforeall
+#each
+            types.Add(typeof(${paramTypeNameStr}));
+#afterall
+#nodata
+#end
+
+            ${method.Flag}${method.InterfaceName}${method.ParamsTypeStrWithReturnType} d = Target.${method.Name};
+            TempClass${method.HashCode} tempClassInstance = new TempClass${method.HashCode}();
+            tempClassInstance.Obj = Target;
+            Call d2 = tempClassInstance.${method.Name};
+            //Call d2 = (o, objs) =&gt; Target.GetType().GetMethod("${method.Name}", types.ToArray()).Invoke(Target, (object[])objs[0]);
+            //object iobj = Target;;
+
+            foreach (IBeginHandler h in BeginHandlerList)
+            {
+                ${method.Flag}if (h is IBegin${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType})
+                ${method.Flag}{
+                ${method.Flag}    IBegin${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType} ih = h as IBegin${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType};
+                ${method.Flag}    ih.SetDelegate(d);
+                ${method.Flag}    ih.ProxyMethod(${method.ParamsNameStr});
+                ${method.Flag}}
+                ${method.Flag}else 
+                if (h is IBeginCallHandler)
+                {
+                    IBeginCallHandler ih = h as IBeginCallHandler;
+                    ih.SetDelegate(tempClassInstance.${method.Name}, Target);
+                    ih.ProxyMethod(new object[] { ${method.ParamsNameStr} });
+                }
+                else if (h is IBeginActionHandler)
+                {
+                    IBeginActionHandler ih = h as IBeginActionHandler;
+                    ih.SetDelegate(null);
+                    ih.ProxyMethod();
+                }
+                else
+                {
+                    //跳过，不支持
+                }
+            }
+
+            foreach (IAroundHandler h in HandlerList)
+            {
+                ${method.Flag}if (h is I${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType})
+                ${method.Flag}{
+                ${method.Flag}    I${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType} ih = h as I${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType};
+                ${method.Flag}    ${method.Flag}${method.InterfaceName}${method.ParamsTypeStrWithReturnType} id1 = ih.GetDelegate(d, Target.${method.Name});
+                ${method.Flag}    d = id1;
+
+                ${method.Flag}    Temp2Class${method.HashCode} tempClassInstance2 = new Temp2Class${method.HashCode}();
+                ${method.Flag}    tempClassInstance2.Obj = id1;
+                ${method.Flag}    d2 = tempClassInstance2.TempMethod;
+                ${method.Flag}    //d2 = (o, objs) =&gt; id1.Method.Invoke(ih, (object[])objs[0]);
+                ${method.Flag}    //iobj = ih;
+                ${method.Flag}}
+                ${method.Flag}else 
+                if (h is ICallHandler)
+                {
+                    ICallHandler ih = h as ICallHandler;
+                    Call id2 = ih.GetDelegate(d2, tempClassInstance.${method.Name}, Target);
+                    d2 = id2;
+                    //iobj = ih;
+                    
+                ${method.Flag}    Temp3Class${method.HashCode} tempClassInstance3 = new Temp3Class${method.HashCode}();
+                ${method.Flag}    tempClassInstance3.Method = id2;
+                ${method.Flag}    d = tempClassInstance3.TempMethod;
+                ${method.Flag}    //d = ((${method.ParamsNameStrHash}) =&gt; ${method.AsReturnTypeName}id2(ih, new object[] { new object[] { ${method.ParamsNameStrHash} } }));
+                }
+            }
+
+            object ret = d2(new object[] { ${method.ParamsNameStr} });
+            //var ret = d(${method.ParamsNameStr});
+
+            foreach (IEndHandler h in EndHandlerList)
+            {
+                ${method.Flag}if (h is IEnd${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType})
+                ${method.Flag}{
+                ${method.Flag}    IEnd${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType} ih = h as IEnd${method.InterfaceName}Handler${method.ParamsTypeStrWithReturnType};
+                ${method.Flag}    ih.SetDelegate(d${method.RetAsReturnTypeName});
+                ${method.Flag}    ih.ProxyMethod(${method.ParamsNameStr});
+                ${method.Flag}}
+                ${method.Flag}else 
+                if (h is IEndCallHandler)
+                {
+                    IEndCallHandler ih = h as IEndCallHandler;
+                    ih.SetDelegate(tempClassInstance.${method.Name}, Target, ret);
+                    ih.ProxyMethod(new object[] { ${method.ParamsNameStr} });
+                }
+                else if (h is IEnd${method.InterfaceName}Handler${method.ReturnTypeNameWithBlank})
+                {
+                    IEnd${method.InterfaceName}Handler${method.ReturnTypeNameWithBlank} ih = h as IEnd${method.InterfaceName}Handler${method.ReturnTypeNameWithBlank};
+                    ih.SetDelegate(null${method.RetAsReturnTypeName});
+                    ih.ProxyMethod();
+                }
+                else if (h is IEndActionHandler)
+                {
+                    IEndActionHandler ih = h as IEndActionHandler;
+                    ih.SetDelegate(null);
+                    ih.ProxyMethod();
+                }
+                else
+                {
+                    //跳过，不支持
+                }
+            }
+
+            return${method.RetAsReturnTypeName2};
+        }
+#afterall
+#nodata
+#end
+    }
+}</value>
+  </data>
+</root>

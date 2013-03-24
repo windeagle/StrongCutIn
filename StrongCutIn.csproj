@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A942F70C-7D7B-48D4-950D-1FFB4F4784B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StrongCutIn</RootNamespace>
+    <AssemblyName>StrongCutIn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NVelocity">
+      <HintPath>..\..\..\WebApplication12\bin\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AOPClassTemp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AOPClassTemp.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AOPMethodInfo.cs" />
+    <Compile Include="Impl\Common\BaseBeginCallHandler.cs" />
+    <Compile Include="Impl\Common\BaseCallHandler.cs" />
+    <Compile Include="Impl\Common\BaseEndCallHandler.cs" />
+    <Compile Include="Impl\WithoutReturn\NoParam\BaseActionHandler.cs" />
+    <Compile Include="Impl\WithoutReturn\NoParam\BaseBeginActionHandler.cs" />
+    <Compile Include="Impl\WithoutReturn\NoParam\BaseEndActionHandler.cs" />
+    <Compile Include="Impl\WithoutReturn\OneParam\BaseActionHandler.cs" />
+    <Compile Include="Impl\WithoutReturn\OneParam\BaseBeginActionHandler.cs" />
+    <Compile Include="Impl\WithoutReturn\OneParam\BaseEndActionHandler.cs" />
+    <Compile Include="Impl\WithReturn\NoParam\BaseBeginCallHandler.cs" />
+    <Compile Include="Impl\WithReturn\NoParam\BaseCallHandler.cs" />
+    <Compile Include="Impl\WithReturn\NoParam\BaseEndCallHandler.cs" />
+    <Compile Include="Impl\WithReturn\OneParam\BaseBeginCallHandler.cs" />
+    <Compile Include="Impl\WithReturn\OneParam\BaseCallHandler.cs" />
+    <Compile Include="Impl\WithReturn\OneParam\BaseEndCallHandler.cs" />
+    <Compile Include="Interface\IEndHandler.cs" />
+    <Compile Include="Interface\IBeginHandler.cs" />
+    <Compile Include="Interface\IAroundHandler.cs" />
+    <Compile Include="Interface\WithoutReturn\NoParam\Action.cs" />
+    <Compile Include="Interface\WithoutReturn\NoParam\IBeginActionHandler.cs" />
+    <Compile Include="Interface\WithoutReturn\NoParam\IActionHandler.cs" />
+    <Compile Include="Interface\WithoutReturn\OneParam\Action.cs" />
+    <Compile Include="Interface\WithoutReturn\OneParam\IActionHandler.cs" />
+    <Compile Include="Interface\WithoutReturn\OneParam\IBeginActionHandler.cs" />
+    <Compile Include="Interface\WithoutReturn\OneParam\IEndActionHandler.cs" />
+    <Compile Include="Interface\Common\Call.cs" />
+    <Compile Include="Interface\Common\IBeginCallHandler.cs" />
+    <Compile Include="Interface\Common\ICallHandler.cs" />
+    <Compile Include="Interface\Common\IEndCallHandler.cs" />
+    <Compile Include="Interface\WithReturn\NoParam\Call.cs" />
+    <Compile Include="Interface\WithoutReturn\NoParam\IEndActionHandler.cs" />
+    <Compile Include="Interface\WithReturn\NoParam\ICallHandler.cs" />
+    <Compile Include="Interface\WithReturn\NoParam\IBeginCallHandler.cs" />
+    <Compile Include="Interface\WithReturn\NoParam\IEndCallHandler.cs" />
+    <Compile Include="Interface\WithReturn\OneParam\Call.cs" />
+    <Compile Include="Interface\WithReturn\OneParam\IBeginCallHandler.cs" />
+    <Compile Include="Interface\WithReturn\OneParam\ICallHandler.cs" />
+    <Compile Include="Interface\WithReturn\OneParam\IEndCallHandler.cs" />
+    <Compile Include="PerformanceMonitor.cs" />
+    <Compile Include="Util\AOPHelperAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\FastInvokeUtil.cs" />
+    <Compile Include="Util\PerformanceUtil.cs" />
+    <Compile Include="Util\PerformanceMonitorCallHandler.cs" />
+    <Compile Include="Util\ProxyGen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AOPClassTemp.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AOPClassTemp.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
