@@ -128,20 +128,15 @@ namespace StrongCutIn.Util
             if (ProxyTypeCache.ContainsKey(theType))
             {
                 var typeSame = theType == ProxyTypeCache[theType].Key;
-                foreach (dynamic existsProxyInstance in ProxyTypeCache[theType].Value)
+                if (typeSame) return theObj;
+                lock (_lockObj)
                 {
-                    if (typeSame)
-                    {
-                        if (theObj == existsProxyInstance)
-                            return existsProxyInstance;
-                    }
-                    else
+                    foreach (dynamic existsProxyInstance in ProxyTypeCache[theType].Value)
                     {
                         if (theObj == existsProxyInstance.Target)
                             return existsProxyInstance;
                     }
                 }
-                if (typeSame) return theObj;
             }
             return Gen(theType, theObj);
         }
@@ -184,7 +179,7 @@ namespace StrongCutIn.Util
                 pList.Add(sbp.ToString());
             }
 
-            var miList = theType.GetMethods().Where(p => p.IsVirtual);
+            var miList = theType.GetMethods().Where(p => p.IsVirtual && !p.IsFinal);
             foreach (var m in miList)
             {
                 var theM = new AOPMethodInfo(m);
